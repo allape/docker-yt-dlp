@@ -3,7 +3,7 @@
 process_file() {
   local file="$1"
   echo "Processing $file"
-  ffmpeg -hwaccel auto -i "$file" -c:v h264 -c:a aac "h264fied/${file%.mp4}.mp4"
+  ffmpeg -hide_banner -hwaccel auto -i "$file" -c:v h264 -c:a aac "h264fied/${file%.mp4}.mp4"
 }
 
 mkdir -p h264fied
